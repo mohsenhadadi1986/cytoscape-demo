@@ -1,0 +1,67 @@
+{
+  "hash": "cf1dc7dc",
+  "configHash": "d979cc42",
+  "lockfileHash": "04838b55",
+  "browserHash": "f634455a",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "cac8239e",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "774540b9",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "298c0b2a",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "e10005df",
+      "needsInterop": false
+    },
+    "cytoscape": {
+      "src": "../../../../../node_modules/cytoscape/dist/cytoscape.cjs.js",
+      "file": "cytoscape.js",
+      "fileHash": "07e9a9b1",
+      "needsInterop": true
+    },
+    "cytoscape-cise": {
+      "src": "../../../../../node_modules/cytoscape-cise/cytoscape-cise.js",
+      "file": "cytoscape-cise.js",
+      "fileHash": "10ade0b6",
+      "needsInterop": true
+    },
+    "rxjs": {
+      "src": "../../../../../node_modules/rxjs/dist/esm5/index.js",
+      "file": "rxjs.js",
+      "fileHash": "c622a5e3",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-3NACKO3X": {
+      "file": "chunk-3NACKO3X.js"
+    },
+    "chunk-QRV6MBRM": {
+      "file": "chunk-QRV6MBRM.js"
+    },
+    "chunk-ICXECXQB": {
+      "file": "chunk-ICXECXQB.js"
+    },
+    "chunk-WSA2QMXP": {
+      "file": "chunk-WSA2QMXP.js"
+    },
+    "chunk-WKYGNSYM": {
+      "file": "chunk-WKYGNSYM.js"
+    }
+  }
+}

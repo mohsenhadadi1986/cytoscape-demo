@@ -1,0 +1,9 @@
+<div class="topology-container">
+  <div id="cy" #cy></div>
+  <h2>Selected Nodes:</h2>
+  <ul *ngIf="selectedNodes.length > 0">
+    <li *ngFor="let node of selectedNodes">{{ node }}</li>
+  </ul>
+  <p *ngIf="selectedNodes.length === 0">No selected nodes.</p>
+</div>
+<layout-footer></layout-footer>

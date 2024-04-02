@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+
+# Dependency directories
+/dist/
+/coverage/
+
+# Compiled output
+*.js
+*.js.map
+*.css
+*.d.ts
+
+# Environment configurations
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Cache and build directories
+.cache/
+.tmp/
+logs/
+temp/
+
+# System Files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    { "data": { "id": "device1", "label": "Device 1" }, "classes": "device" },
+    { "data": { "id": "device2", "label": "Device 2" }, "classes": "device" },
+    {
+      "data": { "id": "gateway1", "label": "Gateway 1" },
+      "classes": "gateway"
+    },
+    {
+      "data": {
+        "source": "gateway1",
+        "target": "device1",
+        "label": "VLAN 170 (BYOD)",
+        "controlPointDistances": "0 0"
+      },
+      "classes": "layer1"
+    },
+    {
+      "data": {
+        "source": "device1",
+        "target": "device2",
+        "label": "VLAN 100 (BYOD)",
+        "controlPointDistances": "0 0"
+      },
+      "classes": "layer1"
+    },
+    {
+      "data": {
+        "source": "device2",
+        "target": "gateway1",
+        "label": "VLAN 180 (BYOD)",
+        "controlPointDistances": "1 1"
+      },
+      "classes": "layer1"
+    }
+  ]
+}

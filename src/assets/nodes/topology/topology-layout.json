@@ -1,0 +1,9 @@
+{
+  "data": {
+    "name": "cise",
+    "cols": 5,
+    "rows": 3,
+    "animate": true,
+    "animationDuration": 1000
+  }
+}
