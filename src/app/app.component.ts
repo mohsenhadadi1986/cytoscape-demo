@@ -12,50 +12,6 @@ cytoscape.use(ciseLayout);
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-// export class AppComponent implements AfterViewInit { // Implement AfterViewInit interface
-
-//   @ViewChild("cy") cytoElem: ElementRef;
-//   cy: cytoscape.Core;
-//   selectedNodes: string[] = [];
-
-//   constructor(
-//     private service: GraphService // Inject GraphService
-//   ) {}
-
-//   ngAfterViewInit(): void {
-//     combineLatest([
-//       this.service.listElements(),
-//       this.service.listStyles(),
-//       this.service.loadLayout()
-//     ]).subscribe(
-//       value => {
-//         this.initCharts(...value);
-//         this.attachNodeClickHandler()
-//       }
-//     );
-//   }
-
-//   protected initCharts(elements: cytoscape.ElementDefinition[], style: cytoscape.Stylesheet[], option: cytoscape.LayoutOptions | undefined) {
-//     this.cy = cytoscape({
-//       container: this.cytoElem.nativeElement,
-//       layout: option,
-//       style: style,
-//       elements: elements,
-//     });
-//   }
-
-//   attachNodeClickHandler(): void {
-//     this.cy.on('tap', 'node', (event) => {
-//       const node = event.target;
-      
-//       node.style('background-color', 'red');
-
-//       const nodeId = node.id();
-      
-//       this.selectedNodes.push(nodeId);
-//     });
-//   }
-// }
 
 export class AppComponent implements OnInit {
   @ViewChild("cy") cytoElem: ElementRef;
@@ -100,7 +56,7 @@ export class AppComponent implements OnInit {
         this.deselectNode(node);
       } else {
         this.selectedNodes.push(nodeId);
-        node.style('background-color', 'red');
+        node.style('background-color', 'green');
       }
     });
   }

@@ -1,37 +1,51 @@
 {
   "nodes": [
-    { "data": { "id": "device1", "label": "Device 1" }, "classes": "device" },
-    { "data": { "id": "device2", "label": "Device 2" }, "classes": "device" },
     {
-      "data": { "id": "gateway1", "label": "Gateway 1" },
-      "classes": "gateway"
+      "group": "nodes",
+      "data": {
+        "id": "n1",
+        "label": "n1",
+        "parent": "nparent"
+      },
+      "scratch": {
+        "_foo": "bar"
+      },
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": ["foo", "bar"],
+      "style": {
+        "background-color": "red"
+      }
+    },
+    {
+      "data": { "id": "n2", "label": "n2" },
+      "renderedPosition": { "x": 200, "y": 200 }
+    },
+    {
+      "data": { "id": "n3", "label": "n3", "parent": "nparent" },
+      "position": { "x": 123, "y": 234 }
+    },
+    {
+      "data": { "id": "nparent", "label": "nparent" },
+      "position": { "x": 150, "y": 150 }
+      
     },
     {
       "data": {
-        "source": "gateway1",
-        "target": "device1",
-        "label": "VLAN 170 (BYOD)",
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "label": "n1-n2",
         "controlPointDistances": "0 0"
       },
-      "classes": "layer1"
-    },
-    {
-      "data": {
-        "source": "device1",
-        "target": "device2",
-        "label": "VLAN 100 (BYOD)",
-        "controlPointDistances": "0 0"
-      },
-      "classes": "layer1"
-    },
-    {
-      "data": {
-        "source": "device2",
-        "target": "gateway1",
-        "label": "VLAN 180 (BYOD)",
-        "controlPointDistances": "1 1"
-      },
-      "classes": "layer1"
+      "pannable": true
     }
   ]
 }
