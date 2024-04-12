@@ -3,6 +3,7 @@ import {
   GraphCurveType,
   GraphArrowType,
 } from "../../../app/graph.domain";
+import {baseShapes, svgToDataUrl} from "../../../utils/svg/svg";
 
 export default {
   style: [
@@ -53,8 +54,7 @@ export default {
     {
       selector: "#nparent",
       style: {
-        "background-color": "white",
-        "shape": "ellipse",
+        "background-image": svgToDataUrl(baseShapes.circle(0, 0, 100, new Map("fill", "red"))),
         "width": "200px",
         "height": "200px",
         "border-width": "2px",

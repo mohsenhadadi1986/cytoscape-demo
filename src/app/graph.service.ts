@@ -1,6 +1,6 @@
 import { Observable, map, of } from 'rxjs';
 import { GraphElement, GraphElementStyle, GraphOptions } from './graph.domain';
-import styleData from '../assets/nodes/topology/topology-style.js';
+import styleData from '../assets/nodes/topologyts/topology-style';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
