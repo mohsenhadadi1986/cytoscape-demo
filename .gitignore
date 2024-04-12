@@ -8,7 +8,7 @@ node_modules/
 # Compiled output
 *.js
 *.js.map
-*.css
+# *.css
 *.d.ts
 
 # Environment configurations

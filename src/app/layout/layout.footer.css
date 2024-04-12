@@ -1,0 +1,13 @@
+.angular-version {
+    font-size: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 100;
+}
