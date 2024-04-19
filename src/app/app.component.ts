@@ -51,9 +51,13 @@ export class AppComponent implements OnInit {
       elements: elements,
     });
 
+
     this.cy.nodes().forEach((node) => {
       this.nodeOriginalColors[node.id()] = node.style("background-color");
     });
+    this.cy.$("#n5, #n6, #n7").makeLayout({
+      name: "circle",
+    }).run()
   }
 
   attachNodeClickHandler(): void {

@@ -55,12 +55,13 @@ export default {
         {
             selector: "#n1",
             style: {
-                "background-image": svgToDataUrl(baseShapes.circle(0, 0, 25, new Map([["fill", "red"]])), 100, 100),
+                "background-image": svgToDataUrl(baseShapes.circle(50, 50, 50, new Map([["fill", "red"]])), 100, 100),
+                "background-width": "100%",
+                "background-height": "100%",
+                "background-fit": "contain",
                 "shape": "roundrectngle",
-                "width": "400px",
-                "height": "400px",
-                "border-width": "2px",
-                "border-color": "#000",
+                "border": "none",
+                "border-color": "white",
                 "border-style": "solid",
             },
         },
