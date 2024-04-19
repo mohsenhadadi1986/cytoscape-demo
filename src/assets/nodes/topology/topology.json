@@ -1,51 +1,91 @@
 {
   "nodes": [
     {
-      "group": "nodes",
       "data": {
-        "id": "n1",
-        "label": "n1",
-        "parent": "nparent"
+        "id": "n1"
       },
-      "scratch": {
-        "_foo": "bar"
-      },
-      "position": {
-        "x": 100,
-        "y": 100
-      },
-      "selected": false,
-      "selectable": true,
-      "locked": false,
-      "grabbable": true,
-      "pannable": false,
-      "classes": ["foo", "bar"],
+      "position": { "x": 200, "y": 200 },
       "style": {
-        "background-color": "red"
+        "background-color": "white",
+        "label": "n1"
       }
     },
     {
-      "data": { "id": "n2", "label": "n2" },
-      "renderedPosition": { "x": 200, "y": 200 }
+      "data": {
+        "id": "n2",
+        "parent": "n1"
+      },
+      "position": { "x": 150, "y": 150 },
+      "style": {
+        "background-color": "#00ff00",
+        "label": "n2"
+      }
     },
     {
-      "data": { "id": "n3", "label": "n3", "parent": "nparent" },
-      "position": { "x": 123, "y": 234 }
+      "data": {
+        "id": "n3",
+        "parent": "n1"
+      },
+      "position": { "x": 250, "y": 150 },
+      "style": {
+        "background-color": "#00ff00",
+        "label": "n3"
+      }
     },
     {
-      "data": { "id": "nparent", "label": "nparent" },
-      "position": { "x": 150, "y": 150 }
-      
+      "data": {
+        "id": "n4",
+        "parent": "n1"
+      },
+      "position": { "x": 200, "y": 250 },
+      "style": {
+        "background-color": "#00ff00",
+        "label": "n4"
+      }
+    },
+    {
+      "data": {
+        "id": "n5",
+        "parent": "n2"
+      },
+      "position": { "x": 150, "y": 100 },
+      "style": {
+        "background-color": "#0000ff",
+        "label": "n5"
+      }
     },
     {
       "data": {
         "id": "e1",
-        "source": "n1",
-        "target": "n2",
-        "label": "n1-n2",
-        "controlPointDistances": "0 0"
+        "source": "n2",
+        "target": "n3",
+        "controlPointDistances": "100 200 300"
       },
-      "pannable": true
+      "style": {
+        "line-color": "#000"
+      }
+    },
+    {
+      "data": {
+        "id": "e2",
+        "source": "n5",
+        "target": "n4",
+        "controlPointDistances": "100 200 300"
+      },
+      "style": {
+        "line-color": "#000"
+      }
+    },
+    {
+      "data": {
+        "id": "e3",
+        "source": "n5",
+        "target": "n3",
+        "controlPointDistances": "100 200 300"
+      },
+      "style": {
+        "line-color": "#000"
+      }
     }
   ]
 }

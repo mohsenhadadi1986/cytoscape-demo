@@ -1,18 +1,22 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
-import { combineLatest } from 'rxjs';
-import cytoscape from 'cytoscape';
-import ciseLayout from 'cytoscape-cise';
-import { GraphService } from './graph.service';
+import {
+  Component,
+  ElementRef,
+  ViewChild,
+  AfterViewInit,
+  OnInit,
+} from "@angular/core";
+import { combineLatest } from "rxjs";
+import cytoscape from "cytoscape";
+import ciseLayout from "cytoscape-cise";
+import { GraphService } from "./graph.service";
 cytoscape.use(ciseLayout);
 
-
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   // standalone: true,
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent implements OnInit {
   @ViewChild("cy") cytoElem: ElementRef;
   cy: cytoscape.Core;
@@ -27,14 +31,19 @@ export class AppComponent implements OnInit {
     combineLatest([
       this.service.listElements(),
       this.service.listStyles(),
-      this.service.loadLayout()
-    ]).subscribe(value => {
+      this.service.loadLayout(),
+    ]).subscribe((value) => {
       this.initCharts(...value);
       this.attachNodeClickHandler();
+      this.attachEdgeVisibilityHandlers();
     });
   }
 
-  initCharts(elements: cytoscape.ElementDefinition[], style: cytoscape.Stylesheet[], option: cytoscape.LayoutOptions | undefined): void {
+  initCharts(
+    elements: cytoscape.ElementDefinition[],
+    style: cytoscape.Stylesheet[],
+    option: cytoscape.LayoutOptions | undefined
+  ): void {
     this.cy = cytoscape({
       container: this.cytoElem.nativeElement,
       layout: option,
@@ -42,13 +51,13 @@ export class AppComponent implements OnInit {
       elements: elements,
     });
 
-    this.cy.nodes().forEach(node => {
-      this.nodeOriginalColors[node.id()] = node.style('background-color');
+    this.cy.nodes().forEach((node) => {
+      this.nodeOriginalColors[node.id()] = node.style("background-color");
     });
   }
 
   attachNodeClickHandler(): void {
-    this.cy.on('tap', 'node', (event) => {
+    this.cy.on("tap", "node", (event) => {
       const node = event.target;
       const nodeId = node.id();
 
@@ -56,7 +65,7 @@ export class AppComponent implements OnInit {
         this.deselectNode(node);
       } else {
         this.selectedNodes.push(nodeId);
-        node.style('background-color', 'green');
+        node.style("background-color", "green");
       }
     });
   }
@@ -66,9 +75,25 @@ export class AppComponent implements OnInit {
     const originalColor = this.nodeOriginalColors[nodeId];
 
     if (originalColor) {
-      node.style('background-color', originalColor);
+      node.style("background-color", originalColor);
 
-      this.selectedNodes = this.selectedNodes.filter(id => id !== nodeId);
+      this.selectedNodes = this.selectedNodes.filter((id) => id !== nodeId);
     }
+  }
+
+  attachEdgeVisibilityHandlers(): void {
+    this.cy.nodes().on("mouseover", (event) => {
+      const node = event.target;
+      node.connectedEdges().forEach((edge) => {
+        edge.show();
+      });
+    });
+
+    this.cy.nodes().on("mouseout", (event) => {
+      const node = event.target;
+      node.connectedEdges().forEach((edge) => {
+        edge.hide();
+      });
+    });
   }
 }

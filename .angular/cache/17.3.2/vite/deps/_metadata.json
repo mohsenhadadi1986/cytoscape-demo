@@ -1,49 +1,49 @@
 {
-  "hash": "dabd527f",
-  "configHash": "6e7fa35c",
+  "hash": "cf1dc7dc",
+  "configHash": "d979cc42",
   "lockfileHash": "04838b55",
-  "browserHash": "1f40954e",
+  "browserHash": "f634455a",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "49c41ad7",
+      "fileHash": "292a85fb",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "e7006f6f",
+      "fileHash": "e13ef06f",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "da2c1d1c",
+      "fileHash": "15153876",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "71810bdf",
+      "fileHash": "5788560c",
       "needsInterop": false
     },
     "cytoscape": {
       "src": "../../../../../node_modules/cytoscape/dist/cytoscape.cjs.js",
       "file": "cytoscape.js",
-      "fileHash": "f826c791",
+      "fileHash": "d2587c95",
       "needsInterop": true
     },
     "cytoscape-cise": {
       "src": "../../../../../node_modules/cytoscape-cise/cytoscape-cise.js",
       "file": "cytoscape-cise.js",
-      "fileHash": "0dd07071",
+      "fileHash": "ddacf855",
       "needsInterop": true
     },
     "rxjs": {
       "src": "../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "68cc8367",
+      "fileHash": "15ac028f",
       "needsInterop": false
     }
   },

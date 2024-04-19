@@ -10,7 +10,7 @@ export default {
         {
             selector: "node",
             style: {
-                "background-color": "#98678a",
+                "background-color": "white",
                 "padding-top": "10px",
                 shape: GraphNodeType.ellipse,
             },
@@ -28,6 +28,7 @@ export default {
         {
             selector: "edge",
             style: {
+                display:"none",
                 width: 1.5,
                 "line-color": "#cecece",
                 "target-arrow-shape": GraphArrowType.triangle,
@@ -52,11 +53,12 @@ export default {
             },
         },
         {
-            selector: "#nparent",
+            selector: "#n1",
             style: {
                 "background-image": svgToDataUrl(baseShapes.circle(0, 0, 25, new Map([["fill", "red"]])), 100, 100),
-                "width": "200px",
-                "height": "200px",
+                "shape": "roundrectngle",
+                "width": "400px",
+                "height": "400px",
                 "border-width": "2px",
                 "border-color": "#000",
                 "border-style": "solid",
