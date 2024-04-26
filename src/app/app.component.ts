@@ -36,6 +36,8 @@ export class AppComponent implements OnInit {
       this.initCharts(...value);
       this.attachNodeClickHandler();
       this.attachEdgeVisibilityHandlers();
+
+      this.getCompoundNodeSize("n1");
     });
   }
 
@@ -50,7 +52,6 @@ export class AppComponent implements OnInit {
       style: style,
       elements: elements,
     });
-
 
     this.cy.nodes().forEach((node) => {
       this.nodeOriginalColors[node.id()] = node.style("background-color");
@@ -99,5 +100,16 @@ export class AppComponent implements OnInit {
         edge.hide();
       });
     });
+  }
+
+  getCompoundNodeSize(nodeId: string): void {
+    const node = this.cy.$(`#${nodeId}`);
+    const boundingBox = node.boundingBox();
+
+    const width = boundingBox.w;
+    const height = boundingBox.h;
+
+    console.log("Width:", width);
+    console.log("Height:", height);
   }
 }

@@ -51,16 +51,5 @@ export default {
         "text-events": "yes",
       },
     },
-    {
-      selector: "#nparent",
-      style: {
-        "background-image": svgToDataUrl(baseShapes.circle(0, 0, 100, new Map("fill", "red"))),
-        "width": "200px",
-        "height": "200px",
-        "border-width": "2px",
-        "border-color": "#000",
-        "border-style": "solid",
-      },
-    },
   ],
 };

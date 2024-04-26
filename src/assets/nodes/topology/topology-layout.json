@@ -1,7 +1,11 @@
 {
   "data": {
-    "name": "preset",
-    "fit": true,
-    "padding":30
+    "name": "circle",
+    "cols": 5,
+    "rows": 3,
+    "animate": true,
+    "animationDuration": 1000,
+    "nodeSeparation": 100,
+    "circleRadius": 200
   }
 }

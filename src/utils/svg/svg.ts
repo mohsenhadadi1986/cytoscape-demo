@@ -41,4 +41,7 @@ export const baseShapes = {
     circle (cx: number, cy: number, r: number, styleMap?: Map<string, string>) {
         return `<circle cx='${cx}' cy='${cy}' r='${r}' ${styleMap ? styleMap2Str(styleMap): ""} />`;
     },
+    rectangle(x: number, y: number, width: number, height: number, styleMap?: Map<string, string>) {
+        return `<rect x='${x}' y='${y}' width='${width}' height='${height}' ${styleMap ? styleMap2Str(styleMap) : ""} />`;
+    }
 }

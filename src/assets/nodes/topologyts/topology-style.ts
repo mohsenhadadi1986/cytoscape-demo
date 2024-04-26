@@ -13,6 +13,9 @@ export default {
                 "background-color": "white",
                 "padding-top": "10px",
                 shape: GraphNodeType.ellipse,
+                "border-color": "black",
+                "border-style": "solid",
+                "border-width":"1px"
             },
         },
         {
@@ -32,7 +35,7 @@ export default {
                 width: 1.5,
                 "line-color": "#cecece",
                 "target-arrow-shape": GraphArrowType.triangle,
-                "target-arrow-color": "green",
+                "target-arrow-color": "black",
                 "curve-style": GraphCurveType.bezier,
                 "control-point-weights": "0.25 .65",
                 "control-point-distances": "data(controlPointDistances)",
@@ -43,7 +46,7 @@ export default {
             style: {
                 label: "data(label)",
                 "font-size": "10",
-                "text-background-color": "white",
+                "text-background-color": "black",
                 "text-background-opacity": 1,
                 "text-background-padding": "2px",
                 "text-margin-y": -4,
@@ -55,15 +58,31 @@ export default {
         {
             selector: "#n1",
             style: {
-                "background-image": svgToDataUrl(baseShapes.circle(50, 50, 50, new Map([["fill", "red"]])), 100, 100),
+                // "background-image":svgToDataUrl(baseShapes.rectangle(25, 25, 100,100, new Map([["fill", "red"], ["stroke-width", ".1px"], ["stroke", "black"]])), 150, 150),
+                "background-image": svgToDataUrl(baseShapes.circle(50, 50, 50, new Map([["fill", "red"],["stroke-width", ".1px"],["stroke", "black"]])), 100, 100),
                 "background-width": "100%",
                 "background-height": "100%",
+                "padding": "10%",
                 "background-fit": "contain",
-                "shape": "roundrectngle",
-                "border": "none",
+                "background-image-containment": "over",
                 "border-color": "white",
                 "border-style": "solid",
+                "background-opacity": "0",
+                "border-width": "0",
             },
         },
+        {
+            selector: "#n2",
+            style: {
+                "background-image": svgToDataUrl(baseShapes.circle(50, 50, 50, new Map([["fill", "blue"],["stroke-width", ".1px"],["stroke", "black"]])), 100, 100),
+                "background-width": "100%",
+                "background-height": "100%",
+                "padding": "10%",
+                "background-color": "rgba(0,0,0,0.1)",
+                "background-opacity": "0",
+                "border-width": "0",
+                "border-style": "solid",
+            },
+        }
     ] as cytoscape.Stylesheet[],
 };
