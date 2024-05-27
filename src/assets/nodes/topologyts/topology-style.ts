@@ -10,7 +10,7 @@ export default {
         {
             selector: "node",
             style: {
-                "background-color": "white",
+                "background-color": "#3498db",
                 "padding-top": "10px",
                 shape: GraphNodeType.ellipse,
                 "border-color": "black",
